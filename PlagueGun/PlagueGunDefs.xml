@@ -3,9 +3,9 @@
 
     <!-- ================================= Industrial ==================================== -->
   
-    <ThingDef Class="Plague_ThingDef_PlagueBullet" ParentName="BaseBullet">
-      <defName>Björn's_PlagueGun_Bullet</defName>
-      <label></label>
+    <ThingDef Class="PlagueGun.ThingDef_PlagueBullet" ParentName="BaseBullet">
+      <defName>Bjorns_PlagueGun_Bullet</defName>
+      <label>plague gun bullet</label>
       <graphicData>
         <texPath>Things/Projectile/Bullet_Small</texPath>
         <graphicClass>Graphic_Single</graphicClass>
@@ -17,13 +17,17 @@
         <speed>55</speed>
       </projectile>
 
-      <AddHediffChance>0.5</AddHediffChance>
-      <HeddiffToAdd>Plague</HeddiffToAdd>
-      <thingClass>Plague.Projectile_PlagueBullet</thingClass>
+      <modExtensions>
+          <li Class="TST_PlagueGun.ModExtension_PlagueBullet">
+              <addHediffChance>0.05</addHediffChance>
+              <hediffToAdd>Plague</hediffToAdd>
+          </li>
+      </modExtensions>
+      <thingClass>PlagueGun.Projectile_PlagueBullet</thingClass>
     </ThingDef>
 
     <ThingDef ParentName="BaseHumanMakeableGun">
-      <defName>Björn's_PlagueGun</defName>
+      <defName>Bjorns_PlagueGun</defName>
       <label>revolver</label>
       <description>Gives some bad plague's to pawn, be cautious on use!</description>
       <possessionCount>1</possessionCount>
@@ -63,7 +67,7 @@
         <li>
           <verbClass>Verb_Shoot</verbClass>
           <hasStandardCommand>true</hasStandardCommand>
-          <defaultProjectile>Björn's_PlagueGun_Bullet</defaultProjectile>
+          <defaultProjectile>Bjorns_PlagueGun_Bullet</defaultProjectile>
           <warmupTime>0.3</warmupTime>
           <range>25.9</range>
           <soundCast>Shot_Revolver</soundCast>
