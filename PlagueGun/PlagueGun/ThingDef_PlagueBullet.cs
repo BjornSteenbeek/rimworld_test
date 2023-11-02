@@ -9,9 +9,9 @@ using Verse;
 
 namespace PlagueGun
 {
-    public class ModExtension_PlagueBullet : DefModExtension
+    public class ThingDef_PlagueBullet : ThingDef
     {
-        public float addHediffChance = 0.05f;
-        public HediffDef hediffToAdd;
+        public float AddHediffChance = 0.05f;
+        public HediffDef HediffToAdd;
     }
 }
