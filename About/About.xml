@@ -3,8 +3,9 @@
 <ModMetaData>
 	<name>Björn's - Plague Gun</name>
 	<author>YourName</author>
-	<targetVersion>0.17.0</targetVersion>
-	<description>V1.0
-    This mod adds a plague gun, a weapon that has a chance to give your enemies the plague.
-		</description>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>bjorns.mod.test</packageId>
+	<description>V1.0This mod adds a plague gun, a weapon that has a chance to give your enemies the plague.</description>
 </ModMetaData>
